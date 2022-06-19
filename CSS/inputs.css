@@ -1,0 +1,237 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.card-input {
+    width: 40%;
+    padding: 30px 90px 90px 90px;
+    border: 6px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    animation: animationCard 2s;
+    animation: bounce 1.5s infinite;
+
+}
+
+@keyframes animationCard {
+
+    /* 25% {
+        transform: translateX(100px);
+    }
+
+    50% {
+        transform: translateY(-100px);
+
+    }
+
+    60% {
+        transform: translateZ(100px);
+    }
+
+    75% {
+        transform: translateX(200px);
+
+    }
+
+    100% {
+        transform: translateX(0);
+    } */
+    from {
+        transform: scaleX(1.5);
+        background: transparent;
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+
+}
+
+.input-global {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    /* background: url('https://images.hdqwalls.com/wallpapers/3d-cube-background-4k-yo.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: #16102f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-container {
+    width: 280px;
+    position: relative;
+}
+
+.label {
+    position: absolute;
+    left: 10px;
+    top: 14px;
+    transition: all 0.2s;
+    padding: 0 2px;
+    z-index: 1;
+    color: #b3b3b3;
+    user-select: none;
+}
+
+.text-input {
+    padding: 0.8rem;
+    width: 100%;
+    /* height: 100%; */
+    margin: 8px;
+    border: 2px solid #2f2c45;
+    background: #272530;
+    border-radius: 5px;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.3s;
+    color: #fff;
+}
+
+.input-text:hover {
+    background: rgba(250, 249, 249, 0.26);
+
+}
+
+.text-input:hover+.label {
+    color: black;
+}
+
+.text-input:hover::placeholder {
+    color: black;
+}
+
+/*etilizando label do input*/
+.label::before {
+    content: '';
+    height: 5px;
+    /*background: #272530;*/
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 100%;
+    z-index: -1;
+}
+
+.text-input:focus {
+    border: 2px solid #38f2ff;
+}
+
+.text-input:focus+.label {
+    /* top: -10px; */
+    left: -50px;
+    color: #38f2ff;
+    font-size: 18px;
+    text-shadow: 1.5px 1px 2px rgba(8, 8, 8, 0.493);
+}
+
+.text-input::placeholder {
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.text-input:focus::placeholder {
+    opacity: 1;
+}
+
+.text-input:not(:placeholder-shown)+.label {
+    top: -10px;
+    color: #38f2ff;
+    font-size: 18px;
+}
+
+@keyframes bounce {
+    0% {
+        tranform: translate(0, 8px);
+    }
+
+    50% {
+        transform: translate(0, 16px);
+    }
+}
+
+.rainbow-button:disabled {
+    background: #272530;
+}
+
+.rainbow-button {
+    width: calc(8vw + 6px);
+    height: calc(3vw + 6px);
+    background: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    text-transform: uppercase;
+    margin-left: 200px;
+    font-size: 1.5vw;
+    font-weight: bold;
+    position: relative;
+    transition: width .5s, border-radius .5s;
+}
+
+.rainbow-button:after {
+    content: attr(alt);
+    width: 20vw;
+    height: 8vw;
+    /* background-color: #191919; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rainbow-button:hover {
+    animation: slidebg 2s linear infinite;
+}
+
+@keyframes slidebg {
+    to {
+        background-position: 20vw;
+    }
+}
+
+#input>* {
+    height: 1.1em;
+    float: left;
+}
+
+#input img {
+    cursor: pointer;
+}
+
+.button:focus {
+    width: 60px;
+    background: #05f711;
+    font-size: 0.8vw;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:focus .texto-button {
+    opacity: 0;
+}
+
+.button:focus .icon {
+    opacity: 1;
+    transition-delay: .5s;
+
+}
+
+.icon {
+    opacity: 0;
+    font-size: 20px;
+    padding-right: 38px;
+}

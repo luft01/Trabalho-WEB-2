@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: url('https://images.justwatch.com/backdrop/197818318/s640/dragon-ball-z');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.card-image {
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    width: 12rem;
+    height: 12rem;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 20px;
+    background: url('https://img1.ak.crunchyroll.com/i/spire2/ab001b1cb053ec0d7b1b47b0f7bf98e71647329181_main.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+
+}
+
+.card-image:hover .info {
+    opacity: 1;
+    height: 100%;
+}
+
+.info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.info-geral {
+    position: absolute;
+    top: 70px;
+    right: 100px;
+    width: 60rem;
+    height: 20rem;
+    backdrop-filter: blur(3px) saturate(42%);
+    -webkit-backdrop-filter: blur(3px) saturate(42%);
+    background-color: rgba(22, 16, 47, 0.74);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    animation: movemove 4s infinite;
+}
+
+.info-geral p {
+    font-size: 24px;
+}
+
+.info-geral2 p {
+    font-size: 24px;
+}
+
+p {
+    color: white;
+}
+
+.info-geral2 {
+    position: absolute;
+    top: 500px;
+    right: 100px;
+    width: 60rem;
+    height: 20rem;
+    backdrop-filter: blur(3px) saturate(42%);
+    -webkit-backdrop-filter: blur(3px) saturate(42%);
+    background-color: rgba(22, 16, 47, 0.74);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    animation: movemove 4s infinite;
+}
+
+@keyframes movemove {
+    0% {
+        tranform: translate(4px, 8px);
+    }
+
+    20% {
+        transform: translate(8px, 16px);
+    }
+
+    40% {
+        transform: translate(0, 0);
+    }
+
+    60% {
+        tranform: translate(-8px, 8px);
+    }
+
+    80% {
+        transform: translate(-16px, 16px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.personagens {
+    display: flex;
+    width: 50%;
+    padding: 4% 2%;
+    box-sizing: border-box;
+    height: 80vh;
+    position: absolute;
+    top: 900px;
+    left: 10px;
+
+}
+
+.box {
+
+    flex: 1;
+    overflow: hidden;
+    transition: .5s;
+    margin: 0 2%;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, .1);
+    line-height: 0;
+}
+
+
+.box>img {
+    width: 200%;
+    height: calc(100% - 10vh);
+    object-fit: cover;
+    transition: .5s;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px rgba(54, 15, 66, 0.8), 0 10px 10px rgba(0, 0, 0, .4),
+        0 10px 0 rgba(0, 0, 0, .5), 10px 10px 0 rgba(0, 0, 0, .4);
+    /*  -webkit-box-shadow: -11px 0px 37px 10px rgba(69, 15, 69, 1);
+    -moz-box-shadow: -11px 0px 37px 10px rgba(69, 15, 69, 1);
+    box-shadow: -11px 0px 37px 10px rgba(69, 15, 69, 1); */
+}
+
+.box>span {
+    font-size: 3.8vh;
+    display: block;
+    text-align: center;
+    height: 10vh;
+    line-height: 2.6;
+}
+
+.box:hover {
+    flex: 1 1 50%;
+}
+
+.box:hover>img {
+    width: 100%;
+    height: 100%;
+}

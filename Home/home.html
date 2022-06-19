@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <link rel="shortcut icon" href="../Assets/tetse02.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animes Best</title>
+
+
+    <link rel="stylesheet" href="../CSS/loaded.css">
+    <link rel="stylesheet" href="../CSS/style-nav.css">
+    <link rel="stylesheet" href="../CSS/texto-animado.css">
+    <link rel="stylesheet" href="home.css">
+    <script src="../JS/top.js"></script>
+    <link rel="stylesheet" href="../Grafico/grafico.css">
+
+    <script src="https://kit.fontawesome.com/864fac0525.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script>
+
+
+        google.charts.load('current', { 'packages': ['corechart'] });
+
+        function desenharPizza() {
+
+            var tabela = new google.visualization.DataTable();
+            tabela.addColumn('string', 'categorias');
+            tabela.addColumn('number', 'valores');
+            tabela.addRows([
+                ['Dragonball', 1000],
+                ['Naruto', 700],
+                ['One Puch Man', 500],
+                ['JOJO', 50],
+                ['Haikyuu', 900],
+                ['Death Note', 260]
+            ]);
+
+            var grafico = new google.visualization.PieChart(document.getElementById('graficoPizza'));
+            grafico.draw(tabela);
+        }
+
+        google.charts.setOnLoadCallback(desenharPizza);
+
+
+    </script>
+    <title>Grafico</title>
+</head>
+
+<body>
+    <div class="menu-container">
+        <nav class="navbar container-nav">
+            <a href="#" class="logo">Animes Best</a>
+            <input type="checkbox" id="toggler">
+            <label for="toggler"><i class="ri-menu-line"></i></label>
+            <div class="menu">
+                <ul class="list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="../HTML/cards.html">Conteúdo</a></li>
+                    <li><a href="../HTML/inputs.html">Cadastro</a></li>         
+                    <li><a href="../Desenvolvedor/me.html">DEV</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1>
+            <span class="home-span">A</span>
+            <span class="home-span">N</span>
+            <span class="home-span">I</span>
+            <span class="home-span">M</span>
+            <span class="home-span">E</span>
+            <span class="home-span">S</span>
+            <span class="home-span">B</span>
+            <span class="home-span">E</span>
+            <span class="home-span">S</span>
+            <span class="home-span">T</span>
+            <span class="home-span">.</span>
+            <span class="home-span">C</span>
+            <span class="home-span">O</span>
+            <span class="home-span">M</span>
+
+        </h1>
+    </div>
+
+    <main class="principal">
+        <div class="container item-one">
+            <p class="parag-one">
+                Quer ficar por dentro dos animeses mais assitidos
+                e mais bem avalidos do momento, com bases nas estatisticas ditas pelos
+                próprios clientes. 
+                Então confira clicando aqui 
+                <a href="#graficoPizza">Saiba Mais</a>
+            </p>
+        </div>
+        <div class="container item-two">
+            <div class="span-text">
+                <p class="parag">Confira agora as últimas notícias quentinhas !!!</p>
+            </div>
+            <div class="global-info">
+                <div class="container-interno one-info">
+                    <section class="secao iguals">
+                        <img src="https://socialsfrag.com/wp-content/uploads/2022/04/Fans-Are-Laughing-At-The-Animation-Of-Boruto-Crying-And-It-Went-Viral.jpg"
+                            alt="Imagem boruto" class="imagem-noticia">
+                    </section>
+                    <article class="noticias iguals">
+                        <p class="text-infos text-top">Tudo sobre o mundo de boruto
+                            e suas críticas
+
+                        </p>
+                        <p class="text-infos text-bot">Com a baixa pelo anime Boruto, os diretores do anime estão
+                            cogitando
+                            fazer um anime sobre o pai dele, o anime irá se chamar O Pai Do Boruto.
+                            Pai do Boruto ganhará seu próprio anime Finalmente o diretor de Boruto anuncia o spin off
+                            contando a história do pai te Boruto, Muitos internautas achavam que a notícia era
+                            mentirosa,
+                            mas...</p>
+                    </article>
+                    <aside class="lateral" id="lateral-poke">
+                        <a href="https://www.pokemon.com/br/pokedex/">
+                            <p>Consiga o Seu Pokemon!!!!!!</p>
+
+                        </a>
+                    </aside>
+
+                </div>
+
+                <div class="container-interno one-info">
+                    <section class="secao iguals">
+                        <img src="https://img1.ak.crunchyroll.com/i/spire2/4dd9e4a8c791dad5b1620a15de09be461586045586_main.jpg"
+                            alt="Imagem boruto" class="imagem-noticia">
+                    </section>
+                    <article class="noticias iguals">
+                        <p class="text-infos text-top">Olha a nostalgia! Sai a Opening do Reboot de Digimon Adventure
+
+                        </p>
+                        <p class="text-infos text-bot">Saiu a opening do revoot de Digimon Adventure, e para minha surpresa 
+                            meteram todas as evoluções do Agumon nela… Geralmente mesmo animes mais longos mudam a Opening a 
+                            cada 12 a 24 episódios.</p>
+                    </article>
+
+                    <aside class="lateral" id="lateral-digi">
+                        <a href="#">
+                            <p>Consiga o Seu Digimon!!!!!!</p>
+
+                        </a>
+                    </aside>
+
+                </div>
+
+                <div class="container-interno one-info">
+                    <section class="secao iguals">
+                        <img src="https://observatoriodocinema.uol.com.br/wp-content/uploads/2019/05/0_w7QZZNZK_wWqXgK1.jpg"
+                            alt="Imagem boruto" class="imagem-noticia">
+                    </section>
+                    <article class="noticias iguals">
+                        <p class="text-infos text-top">Dragon Ball Super – Filme CG ganha novo trailer e data de estreia
+
+                        </p>
+                        <p class="text-infos text-bot">Durante a JUMP Festa 2021, foi revelado um novo trailer para o novo 
+                            filme de Dragon Ball Super. O vídeo traz alguns detalhes do novo vilão (que no caso se intitula
+                             como herói), além de confirmar a estreia do filme para o dia 22 de abril nos cinemas japoneses.
+                            
+                        </p>
+                    </article>
+
+                    <aside class="lateral" id="lateral-vava">
+                        <a href="#">
+                            <p>Consiga já seus R points!!!!!!</p>
+
+                        </a>
+                    </aside>
+
+                </div>
+                <div class="container-interno one-info">
+                    <section class="secao iguals">
+                        <img src="https://sm.ign.com/ign_br/screenshot/default/blob_7gmc.jpg"
+                            alt="Imagem boruto" class="imagem-noticia">
+                    </section>
+                    <article class="noticias iguals">
+                        <p class="text-infos text-top">One Punch Man – Diretor de Velozes e Furiosos será o responsável
+                            pelo
+                            Live Action do mangá
+
+                        </p>
+                        <p class="text-infos text-bot">O site Deadline revelou que o ex-diretor da franquia Velozes e
+                            Furiosos , Justin Lin, irá ser o responsável pela direção do Live Action de One 
+                            Punch Man que a Sony está produzindo.</p>
+                    </article>
+
+                    <aside class="lateral" id="lateral-poe">
+                        <a href="#">
+                            <p>Consiga já seus Exalteds!!!!!!</p>
+
+                        </a>
+                    </aside>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="container item-three">
+            <p>
+                Como mostra o grafico
+            </p>
+            <div id="graficoPizza"></div>
+        </div>
+    </main>
+
+    </div>
+    <footer>
+        <button id="return-top"> 
+            voltar ao topo
+        </button>
+    </footer>
+    <script src="../JS/top.js"></script>
+</body>
+
+</html>
